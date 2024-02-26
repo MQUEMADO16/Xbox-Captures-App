@@ -1,0 +1,8 @@
+to do:
+
+- create readme
+- create project planner
+
+some ideas for planner:
+
+backend in C# ASP.NET since more familiarity and also 'diversify tech stack', get more variance in languages and tech used as opposed to making everything with javascript using node.js backend
