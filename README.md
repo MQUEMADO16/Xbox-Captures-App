@@ -1,6 +1,8 @@
 # Xbox Captures App
 
-When Xbox announced they would no longer be storing Xbox captures on their end for more than 90 days, I was dismayed. They offered a method of uploading clips to OneDrive, but this method was tedious and I hate OneDrive, so I decided to make this. This is a web application meant to display the Xbox captures from my account. This is being built using React with TypeScript. My plan is to create a backend that will fetch new clips over an undecided interval and store them to a SQL database. This is a web application meant to display the Xbox captures from my account. This is being built using React with TypeScript. This will be updated as the project progresses.
+When Xbox announced they would no longer be storing Xbox captures for more than 90 days, I was dismayed. They offered a method of uploading clips to OneDrive but this method was tedious and I hate OneDrive, so I decided to make this. 
+
+This is a web application meant to display the Xbox captures from my account. This is being built using React with TypeScript. My plan is to create a backend that will fetch new clips over an undecided interval and store them to a SQL database. This is a web application meant to display the Xbox captures from my account. This is being built using React with TypeScript. Full project architecture will be created soon. This will be updated as the project progresses.
 
 ## Installation
 
