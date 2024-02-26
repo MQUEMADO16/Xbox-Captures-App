@@ -1,7 +1,7 @@
 import React from 'react';
 import { Box, AppBar, Toolbar, IconButton, Typography, Button } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
-import { getClips } from '../services/apiService';
+import { getClips } from './services/apiService';
 
 function App() {
 
