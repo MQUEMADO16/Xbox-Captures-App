@@ -12,7 +12,7 @@ const apiService = axios.create({
   },
 });
 
-export const getClips = async () => {
+export const getClips = async (): Promise<ApiResponse> => {
   try {
     const response = await apiService.get('/api/v2/dvr/gameclips');
     return response.data;
