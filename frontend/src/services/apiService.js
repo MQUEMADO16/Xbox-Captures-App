@@ -21,6 +21,4 @@ export const getClips = async () => {
   }
 };
 
-console.log(getClips());
-
 export default apiService;
