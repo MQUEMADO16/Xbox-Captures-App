@@ -63,20 +63,32 @@ const downloadVideo = async (url, filePath) => {
 
     try {
 
-        // Fetch the video data
-        const response = await axios.get(url, { responseType: 'arraybuffer' });
+      let startTime = Date.now();
 
-        if (response.status !== 200) {
-            throw new Error(`Failed to download video. Status code: ${response.status}`);
-        }
+      // Fetch the video data
+      const response = await axios.get(url, { responseType: 'arraybuffer' });
 
-        // Convert the response data to a Buffer
-        const videoBuffer = Buffer.from(response.data);
+      let endTime = Date.now();
+      let executionTime = endTime-startTime;
+      console.log(`axios.get() execution time: ${executionTime} milliseconds`);
 
-        // Write the buffer to a file
-        fs.writeFileSync(filePath, videoBuffer);
+      if (response.status !== 200) {
+          throw new Error(`Failed to download video. Status code: ${response.status}`);
+      }
 
-        return `Video downloaded successfully and saved as ${filePath}`;
+      // Convert the response data to a Buffer
+      const videoBuffer = Buffer.from(response.data);
+
+      startTime = Date.now();
+
+      // Write the buffer to a file
+      fs.writeFileSync(filePath, videoBuffer);
+
+      endTime = Date.now();
+      executionTime = endTime-startTime;
+      console.log(`writeFileSync() execution time: ${executionTime} milliseconds`);
+
+      return `Video downloaded successfully and saved as ${filePath}`;
     }
     catch (error) {
 
